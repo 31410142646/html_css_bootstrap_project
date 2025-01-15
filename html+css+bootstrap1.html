@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+    <!-- css code -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+
+    <!-- Js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script> -->
+
+    <!-- CSS code -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            z-index: 6;
+        }
+
+        .first {
+            height: 40px;
+            width: 100%;
+            background-color: #023B6D;
+            color: white;
+            display: flex;
+
+        }
+
+
+
+        .made {
+            height: 100%;
+            width: 30%;
+        }
+
+        .made i {
+            margin-left: 15px;
+            color: rgb(235, 232, 232);
+
+        }
+
+        .made i:hover {
+            color: white;
+        }
+
+        .presento {
+            padding: 10px;
+            /* background-color: aqua; */
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            /* padding: 0px 100px; */
+            justify-content: center;
+        }
+
+        .presento h6 {
+            padding: 0px 20px;
+        }
+
+        .presento i {
+            color: rgb(235, 232, 232);
+        }
+
+        .presento i:hover {
+            color: white;
+        }
+
+        .presento .bi {
+            font-size: 20px;
+            /* left: ; */
+            padding-left: 400px;
+        }
+
+        .free {
+            width: 20%;
+            height: 100%;
+            background-color: #00B4FF;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+        }
+
+        .free .bi {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        .second {
+            height: 70px;
+            width: 100%;
+            /* background-color: blue; */
+            background-color: white;
+            display: flex;
+            padding: 0px 100px;
+            align-items: center;
+
+        }
+
+        .second .item {
+            height: 100%;
+            width: 90%;
+            /* background-color: cadetblue; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .second .item ul {
+            display: flex;
+            margin-left: 370px;
+            align-items: center;
+            margin-top: 17px;
+        }
+
+        .second .item ul li {
+            list-style: none;
+        }
+
+        .second .item ul li a {
+            color: black;
+
+            margin-left: 30px;
+            text-decoration: none;
+
+        }
+
+        .second .item ul li a:hover {
+            color: red;
+        }
+
+        .second .item ul li a i:hover {
+            color: red;
+        }
+
+        .second .dropdown li {
+            margin-left: 20px;
+            line-height: 30px;
+        }
+
+        .second .dropdown .dropdown-menu {
+
+            margin-left: 0px;
+            margin-top: 10px;
+            width: 200px;
+            display: block;
+            visibility: hidden;
+            transition: all 0.1s;
+            border: none;
+
+        }
+
+        .second .dropdown:hover .dropdown-menu {
+            visibility: visible;
+        }
+
+        .second .dropdown .dropdown li {
+            margin-left: 20px;
+            line-height: 30px;
+        }
+
+        .second .dropdown .dropdown-menu .dropdown .dropdown-menu {
+            margin-left: 170px;
+            margin-top: -20px;
+            width: 200px;
+            display: block;
+            visibility: hidden;
+            transition: all 0.1s;
+            border: none;
+        }
+
+        .second .dropdown .dropdown-menu .dropdown:hover .dropdown-menu {
+            visibility: visible;
+        }
+
+        .second .item button {
+            background-color: red;
+            color: white;
+            border: none;
+            text-align: center;
+            justify-content: center;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+
+        .second .item button:hover {
+            background-color: black;
+        }
+
+        /* ************************************************************************* */
+        /* .firstpage {} */
+
+        .firstpage img {
+            height: 740px;
+            width: 100%;
+            background: center center;
+            position: relative;
+            z-index: -1;
+
+
+        }
+
+        .firstpage .img {
+            background-color: hsla(0, 0%, 0%, 0.5);
+            height: 630px;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 110px;
+        }
+
+        .img .text {
+            height: 630px;
+            width: 45%;
+            /* background-color: chartreuse; */
+            margin-left: 100px;
+            position: absolute;
+            padding: 150px 0px;
+        }
+
+        .img .text h1 {
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            color: white;
+        }
+
+        .img .text button {
+            border: none;
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            padding: 8px 25px;
+            font-size: 30px;
+            transition: 0.2s ease-out;
+
+
+        }
+
+        .img .text button:hover {
+            background-color: hsla(0, 0%, 0%, 0);
+            border: 2px solid white;
+        }
+
+        /* ******************************************************************* */
+        .slide .carousel-inner {
+            height: 250px;
+            width: 80%;
+            /* background-color: burlywood; */
+            position: relative;
+            margin: 0px 10%;
+        }
+
+        .slide .carousel-inner .row {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .slide .carousel-inner .col-lg-2 {
+            height: 200px;
+            width: 16.66%;
+            /* border: 2px solid black; */
+            padding-top: 100px;
+        }
+
+        .slide .carousel-inner .col-lg-2 img {
+            height: 80px;
+            width: 150px;
+            filter: grayscale(100);
+            opacity: 0.5;
+        }
+
+        .slide .carousel-inner .col-lg-2 img:hover {
+            opacity: 1;
+            filter: none;
+        }
+
+        .slide .carousel-indicators li {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            border: 2px solid red;
+        }
+
+        .slide .carousel-indicators .active {
+            background-color: red;
+        }
+
+        /* ************************************************************** */
+        .about {
+            height: 500px;
+            width: 100%;
+            background-color: black;
+            transform: skewY(-3deg);
+            position: relative;
+            top: 140px;
+            padding: 50px 100px;
+
+
+        }
+
+        .about .sub {
+            height: 350px;
+            width: 100%;
+            /* background-color: chocolate; */
+            transform: skewY(3deg);
+            display: flex;
+        }
+
+
+
+        .about .col1 {
+            height: 100%;
+            width: 40%;
+            /* background-color: crimson; */
+            padding-right: 20px;
+        }
+
+        .about .col1 h1 {
+            transform: none;
+            color: white;
+            margin: 30px 0px;
+        }
+
+        .about .col2 {
+            height: 100%;
+            width: 60%;
+            /* background-color: rgb(43, 173, 163); */
+            color: white;
+            display: flex;
+            padding-left: 30px;
+        }
+
+        .about button {
+            padding: 7px 25px;
+            border: 2px solid red;
+            border-radius: 30px;
+            background-color: hsla(0, 0%, 0%, 0);
+            color: white;
+            margin-top: 30px;
+        }
+
+        .about button:hover {
+
+            background-color: red;
+        }
+
+        .about .col2 .col2_1,
+        .about .col2 .col2_2 {
+            /* border: 2px solid red; */
+            height: 50%;
+            width: 100%;
+            padding-right: 30px;
+        }
+
+
+
+
+
+        .about .col2 p {
+            color: rgb(146, 142, 142);
+
+        }
+
+        .about .row1_1,
+        .about .row1_2,
+        .about .row2_1,
+        .about .row2_2 {
+            height: 100%;
+            width: 100%;
+            /* border: 2px solid red; */
+        }
+
+        .about .col2 .bi {
+            color: red;
+            font-size: 40px;
+        }
+
+        /* ********************************************************************* */
+        .review {
+            height: 1350px;
+            width: 100%;
+            transform: skewY(-3deg);
+            /* background-color: darkkhaki; */
+            padding: 150px 100px;
+            position: relative;
+            top: 140px;
+        }
+
+        .review .main {
+            height: 900px;
+            width: 100%;
+            /* background-color: cyan; */
+            transform: skewY(3deg);
+        }
+
+        .review .main .row1 {
+            height: 150px;
+            /* background-color: azure; */
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .review .main .row1 .col {
+            width: 22% !important;
+            height: 100%;
+            background-color: white;
+            box-shadow: 0px 0px 5px 4px rgb(243, 240, 240);
+            float: left;
+            margin: 5px;
+            text-align: center;
+        }
+
+
+        .review .row1 .col span {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            position: relative;
+            display: block;
+            top: -35px;
+            left: 110px;
+            box-shadow: 0px 0px 2px 1px lightgrey;
+            padding: 5px;
+        }
+
+        .review .row1 .col .bi {
+            font-size: 20px;
+            color: red;
+        }
+
+        .review .content {
+            height: 100px;
+            width: 200px;
+            /* background-color: brown; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-right: 38px;
+        }
+
+        /* row2 */
+        .review .row2 {
+            height: 200px;
+            width: 100%;
+            /* background-color: darkgreen; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 60px;
+
+        }
+
+        .review .row2 .col1 {
+            /* background-color: cadetblue; */
+            height: 60%;
+            width: 24%;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+
+        .review .row2 .col1:hover {
+            color: red;
+        }
+
+        .review .row2 .col1 i {
+            width: 30%;
+            height: 60%;
+            /* background-color: darkorchid; */
+            margin-bottom: 10px;
+            padding-bottom: 50px;
+        }
+
+        .review .row2 .col1 .bi {
+            font-size: 40px;
+
+        }
+
+        .review .row2 .col1 h5 {
+            width: 70%;
+            height: 60%;
+            /* background-color: bisque; */
+        }
+
+        /* row3 */
+        .review .row3 {
+            height: 580px;
+            width: 100%;
+            /* background-color: deeppink; */
+            display: flex;
+            position: relative;
+            top: 40px;
+        }
+
+
+
+        .review .row3 .col1 {
+            height: 100%;
+            width: 50%;
+            /* border: 2px solid blueviolet; */
+        }
+
+        .review .row3 #col-1 {
+            padding-right: 40px;
+        }
+
+        .review .main .row3 ul li {
+            line-height: 40px;
+            margin-left: 20px;
+        }
+
+        .review .main .row3 p {
+            line-height: 30px;
+        }
+
+        /* ***************************************************************************** */
+        .services {
+            height: 800px;
+            width: 100%;
+            transform: skewY(-3deg);
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            top: 300;
+        }
+
+        .services .sub {
+            height: 700px;
+            width: 100%;
+            transform: skewY(3deg);
+            /* background-color: chartreuse; */
+
+        }
+
+        .services .sub2 {
+            height: 80%;
+            width: 100%;
+            /* display: flex; */
+            justify-content: space-between;
+        }
+
+        .services .sub2 .row {
+            height: 180px;
+            width: 100%;
+            /* border: 2px solid purple; */
+            justify-content: space-around;
+            margin-left: 5px;
+        }
+
+        .services .sub2 .row span .bi {
+            font-size: 50px;
+            color: red;
+        }
+
+        .services .sub2 .row h5 a {
+            color: white;
+        }
+
+        .services .row .col-md-6 {
+            /* border: 1px solid white; */
+        }
+
+        /* **************************************************************** */
+        .portfolio {
+
+            position: relative;
+
+            height: 1400px;
+            width: 100%;
+            /* background-color: rgb(219, 199, 199); */
+            padding: 10px 100px;
+            top: 50px;
+
+
+        }
+
+
+
+        .portfolio .main {
+            height: 1200px;
+            width: 100%;
+            /* background-color: slateblue; */
+            text-align: center;
+
+        }
+
+        .portfolio .main button:hover {
+            background-color: red;
+        }
+
+        .portfolio .main .portfolio-wrap {
+            overflow: hidden;
+            position: relative;
+            background: rgba(17, 17, 17, 0.6);
+            height: 100%;
+            width: 100%;
+            z-index: 5;
+            /* background-color: aqua; */
+        }
+
+        .portfolio .main .portfolio-wrap img {
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .portfolio .main .portfolio-wrap:hover img {
+            transform: scale(1.3);
+            opacity: 0.3;
+        }
+
+
+
+
+
+        .portfolio .main .portfolio-wrap .portfolio-info {
+            position: absolute;
+            /* top: 0; */
+            bottom: 0px;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            padding-top: 200px;
+            /* background-color: #023B6D; */
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .portfolio .main .portfolio-wrap .portfolio-info:hover {
+            opacity: 1;
+        }
+
+        .portfolio .main .portfolio-wrap .portfolio-links .bi {
+            color: lightgray;
+            size: 20px;
+            position: relative;
+            bottom: 25px;
+            font-size: 30px;
+            /* top: 6px; */
+
+        }
+
+        /* *************************************************************************************** */
+        .testimonials {
+            position: relative;
+            height: 450px;
+            width: 100%;
+            /* background-color: violet; */
+            /* top: 400px; */
+            text-align: center;
+            padding: 0px 100px;
+
+        }
+
+        .testimonials .main .carousel-inner img {
+            height: 30%;
+            width: 30%;
+            margin-bottom: 15px;
+        }
+
+
+        .testimonials .main .carousel-inner {
+            padding: 0px;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .testimonials .main .row {
+            height: 100%;
+            width: 100%;
+            /* background-color: cadetblue; */
+        }
+
+
+
+
+
+        .testimonials .main .page {
+            height: 100%;
+            width: 100%;
+            /* background-color: darkgray; */
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonials .main .row2 {
+            display: flex;
+            align-items: center;
+
+        }
+
+        /* ********************************************************************** */
+        .price {
+            height: 720px;
+            width: 100%;
+            transform: skewY(-3deg);
+            padding: 100px;
+            background-color: #1B1B1B;
+            position: relative;
+        }
+
+        .price .main {
+            height: 600px;
+            width: 100%;
+            transform: skewY(3deg);
+            /* background-color: lightcoral; */
+            text-align: center;
+            color: white;
+        }
+
+        .price .main .row {
+            height: 400px;
+            width: 100%;
+            position: relative;
+            margin-left: 2px;
+            /* background-color: green; */
+
+
+        }
+
+        .price .main .row .content {
+            height: 100%;
+            width: 100%;
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 7px;
+            background-color: #2B2B2B;
+            color: white;
+            line-height: 30px;
+
+        }
+
+        .price .main .row .content button {
+            border: 2px solid rgb(152, 154, 155);
+            padding: 7px 15px;
+            background: none;
+            margin: 20px;
+            color: white;
+        }
+
+        .price .main .row .content button:hover {
+            border: 2px solid white;
+        }
+
+        /* **************************************************************************************** */
+        .ask {
+            height: 1000px;
+            width: 100%;
+            position: relative;
+            /* background-color: yellow; */
+            transform: skewY(-3deg);
+            padding: 100px;
+            top: 2px;
+        }
+
+        .ask .main {
+            height: 97%;
+            width: 100%;
+            /* background-color: aqua; */
+            transform: skewY(3deg);
+            text-align: center;
+            position: relative;
+
+        }
+
+        .ask .main i {
+            position: absolute;
+            right: 5px;
+        }
+
+        /* *********************************************************************** */
+        .team {
+            height: 700px;
+            width: 100%;
+            padding: 70px 100px;
+            position: relative;
+            background-color: #1B1B1B;
+            transform: skewY(-3deg);
+        }
+
+        .team .main {
+            height: 95%;
+            width: 100%;
+            position: relative;
+            /* background-color: blue; */
+            text-align: center;
+            transform: skewY(3deg);
+            color: white;
+        }
+
+        .team .main .row {
+            height: 400px;
+            position: relative;
+            /* background-color: crimson; */
+            width: 100%;
+            left: 9px;
+        }
+
+        .team .main .row img {
+            height: 75%;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        /* .team .main .row .content{
+            width:100% ;
+            height: 25%;
+            
+
+        } */
+
+        .team .main .row .sub {
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .team .main .row .logo {
+            height: 74%;
+            width: 95%;
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+
+        }
+
+        .team .main .row .logo:hover {
+            opacity: 1;
+        }
+
+        .team .main .row .logo span {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            display: inline-block;
+            padding-top: 5px;
+            text-align: center;
+            top: 220px;
+        }
+
+        .team .main .row span .bi {
+            color: white;
+        }
+
+        .team .main .row span:hover {
+            background-color: black;
+        }
+
+        /* ******************************************************************** */
+        .contact {
+            height: 730px;
+            width: 100%;
+            position: relative;
+            /* background-color: coral; */
+            padding: 60px 100px;
+            top: 60px;
+            text-align: center;
+        }
+
+
+        .contact .row {
+            width: 100%;
+            height: 450px;
+            /* background-color: blueviolet; */
+            position: relative;
+            left: 15px;
+        }
+
+        .contact .row i {
+            border: 2px dotted rgb(238, 146, 146);
+            border-radius: 50%;
+            padding: 5px 12px;
+        }
+
+
+        .contact .row .text {
+            box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+        }
+
+        .contact .row .bi {
+            font-size: 40px;
+        }
+
+        .contact .row h4 {
+            margin-top: 30px;
+        }
+
+        .contact .row .text {
+            padding-top: 20px;
+        }
+
+        .contact .row .form {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+        }
+
+        .contact .row input {
+            height: 40px;
+            margin: 3px;
+            padding: 2px;
+            width: 100%;
+            border-radius: 7px;
+        }
+
+        .contact .row button {
+            background-color: red;
+            color: white;
+            height: 40px;
+            width: 160px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* ************************************************************************************* */
+        #footer {
+            height: 500px;
+            width: 100%;
+            /* padding: 100px; */
+            background-color: #1B1B1B;
+            position: relative;
+            top: 90px;
+            text-align: center;
+        }
+
+        #footer .container .row {
+            height: 350px;
+            width: 100%;
+            /* background-color: aqua; */
+            position: relative;
+            /* margin: 30px 100px; */
+            top: 30px;
+            left: 6px;
+            bottom: 30px;
+
+        }
+
+        #footer .row h4 {
+            text-align: left;
+            color: white;
+        }
+
+        #footer .row ul li {
+            list-style: none;
+            margin-bottom: 20px;
+            text-align: left;
+
+        }
+
+        #footer .row ul li i {
+            color: white;
+        }
+
+        #footer .row ul li a {
+            text-decoration: none;
+            color: rgb(213, 216, 219);
+        }
+
+        #footer .row ul li a:hover {
+            color: white;
+        }
+
+        #footer .row .col-lg-4 p {
+            color: white;
+        }
+
+        #footer .row .col-lg-4 {
+            text-align: left;
+        }
+
+        #footer .row .col-lg-4 input {
+            border: none;
+            height: 40px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: 200px;
+
+        }
+
+        #footer .row .col-lg-4 .btn {
+            width: 100px;
+            margin-left: -4px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            margin-bottom: 6px;
+            height: 40px;
+
+        }
+
+        #footer .row .col-lg-4 .btn:hover {
+            background-color: rgb(198, 70, 70);
+        }
+
+        #footer .bottm {
+            height: 100px;
+            width: 100%;
+            background-color: #111111;
+            padding: 20px 100px;
+            position: relative;
+            top: 100px;
+        }
+
+        #footer .bottm .icon {
+            position: relative;
+            left: 700px;
+        }
+
+        #footer .bottm span {
+            height: 35px;
+            width: 35px;
+            background-color: #474646;
+            margin: 1px;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 2px;
+            text-align: center;
+        }
+
+        #footer .bottm span:hover {
+
+            background-color: red;
+
+        }
+
+        #footer .bottm span .bi {
+            color: white;
+        }
+
+        #footer .bottm a {
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            position: fixed;
+            border-radius: 3px;
+            bottom: 15px;
+            right: 35px;
+            padding-top: 3px;
+            z-index: 4;
+
+        }
+
+        #footer .bottm .row a .bi {
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="first container-fluid">
+            <div class="made">
+                <a href="https://bootstrapmade.com/" title="Bootstrap Templates | Premium & free download"><img
+                        src="../html+css+bootstrap/img/made.png" alt="" height="70%" style="margin: 5px 10px;"></a>
+                <a href="" title="Desktop preview of the Presento template "><i class="fa-solid fa-desktop"></i></a>
+                <a href="" title="Tablet preview of the Presento template"><i
+                        class="fa-solid fa-tablet-screen-button "></i></a>
+                <a href="" title="Mobile preview of the Presento template"><i
+                        class="fa-solid fa-mobile-screen-button"></i></a>
+            </div>
+            <div class="presento">
+                <i class="fa-solid fa-angle-left" title="Previous Template:FlexStart"></i>
+                <h6 title="Presento Template Home Page">Presento</h6>
+                <i class="fa-solid fa-angle-right" title="Next Template:Bizland"></i>
+                <i class="bi bi-box-arrow-up-right mr-0"></i>
+            </div>
+            <div class="free">
+                <!-- <i class="fa-solid fa-download"></i> -->
+                <i class="bi bi-download"></i>
+                <h6 style=" padding-left: 4px;" title="Download the present Template">FREE DOWNLOAD</h6>
+            </div>
+        </div>
+
+        <div class="second">
+            <div>
+                <h3>Presento <span
+                        style="height: 7px; width: 7px; border-radius: 50%; background-color: red; margin-left: 2px; display: inline-block;"></span>
+                </h3>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li> <a href="" style="color: red;">Team</a></li>
+                    <li><a href="">Blog</li></a>
+                    <li class="dropdown"><a href=""> Drop Down <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Drop Down1</a></li>
+                            <li class="dropdown"><a href="">Deep Down <i class="fa-solid fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>Deep Drop Down1</li>
+                                    <li>Deep Drop Down2</li>
+                                    <li>Deep Drop Down3</li>
+                                    <li>Deep Drop Down4</li>
+                                    <li>Deep Drop Down5</li>
+                                </ul>
+
+                            </li>
+
+                            <li><a href="">Drop Down2</a></li>
+                            <li><a href="">Drop Down3</a></li>
+                            <li><a href="">Drop Down4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" style="text-decoration: none;">Contact</a></li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+        </div>
+        <!-- <div class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+          <div class="navbar-brand">
+            <h1>Presento.</h1>
+          </div>
+          <div class="navbar-toggler" data-target="#nav_id" data-toggle="collapse">
+            <i class="fa-solid fa-bars text-dark"></i>
+          </div>
+          <div class="navbar navbar-collapse collapse p-3" id="nav_id">
+           <div class="nav-item">
+            <a href="#" class="nav-link text-danger active">Home</a>
+           </div>
+           <div class="nav-item">
+              <a href="#abt" class="nav-link text-dark">About</a>
+           </div>
+           <div class="nav-item">
+            <a href="#ser" class="nav-link text-dark">Services</a>
+         </div>
+         <div class="nav-item">
+            <a href="#port" class="nav-link text-dark">Portfolio</a>
+         </div>
+         <div class="nav-item">
+            <a href="#team" class="nav-link text-dark">Team</a>
+         </div>
+         <div class="nav-item">
+            <a href="#blog" class="nav-link text-dark">Blog</a>
+         </div>
+         <div class="dropdown nav-item"><a href=""> Drop Down <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="">Drop Down1</a></li>
+                <li class="dropdown"><a href="">Deep Down <i class="fa-solid fa-angle-right"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>Deep Drop Down1</li>
+                        <li>Deep Drop Down2</li>
+                        <li>Deep Drop Down3</li>
+                        <li>Deep Drop Down4</li>
+                        <li>Deep Drop Down5</li>
+                    </ul>
+
+                </li>
+
+                <li><a href="">Drop Down2</a></li>
+                <li><a href="">Drop Down3</a></li>
+                <li><a href="">Drop Down4</a></li>
+            </ul>
+        </div>
+        <div class="nav-item">
+            <a href="#contact" class="nav-link text-dark">Contact</a>
+         </div>
+          <div class="nav-item">
+            <button class="btn btn-danger p-2">Get Started</button>
+          </div>
+    </div>
+   </div> -->
+    </nav>
+    <!-- *************************************************************************** -->
+    <section class="firstpage">
+        <img src="../html+css+bootstrap/img/twolady.jpg" alt="">
+        <div class="img">
+            <div class="text">
+                <h1>Better digital experience <br>with pregento</h1>
+                <p style="font-size: 30px; margin: 30px 0px;   color: white;">We are team of talented designers making
+                    websites <br>with Bootstrap</p>
+                <a href=""><button>Get started</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- *************************************************************************** -->
+    <section class="slide">
+        <div class="carousel slide" data-ride="carousel" data-interval="2000" id="c1">
+            <ul class="carousel-indicators">
+                <li data-target="#c1" data-slide-to="0" class="active"></li>
+                <li data-target="#c1" data-slide-to="1" class="active"></li>
+                <li data-target="#c1" data-slide-to="2" class="active"></li>
+                <li data-target="#c1" data-slide-to="3" class="active"></li>
+                <li data-target="#c1" data-slide-to="4" class="active"></li>
+                <li data-target="#c1" data-slide-to="5" class="active"></li>
+                <li data-target="#c1" data-slide-to="6" class="active"></li>
+                <li data-target="#c1" data-slide-to="7" class="active"></li>
+                <li data-target="#c1" data-slide-to="8" class="active"></li>
+            </ul>
+            <div class="carousel-inner">
+                <!-- 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-2 ">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/trustly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/old.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/grabyo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/myob1.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/Belimo.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lifegroups.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/lilly.png" alt="">
+                        </div>
+                        <div class="col-lg-2">
+                            <img src="../html+css+bootstrap/img/citrus.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="about" id="#abt">
+        <div class="sub">
+            <div class="col1">
+                <h1>Voluptatem dignissimos provident quasi</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
+
+                <button>ABOUT US<i class="fa-solid fa-angle-right" style="margin-left: 5px;"></i> </button>
+            </div>
+            <div class="col2">
+                <div class="col2_1">
+                    <div class="row1_1">
+                        <i class="bi bi-receipt"></i>
+                        <h4>Corporis voluptates sit</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                    <div class="row1_2">
+                        <i class="bi bi-box"></i>
+                        <h4>Ullamco laboris nisi</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </div>
+
+                </div>
+                <div class="col2_2">
+                    <div class="row2_1">
+                        <i class="bi bi-images"></i>
+                        <h4>Labore consequatur</h4>
+                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    </div>
+                    <div class="row2_1">
+                        <i class="bi bi-shield"></i>
+                        <h4>Beatae veritatis</h4>
+                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="review">
+        <div class="main">
+            <div class="row1">
+                <div class="col">
+
+                    <span><i class="bi bi-emoji-smile"></i></span>
+                    <div class="content">
+                        <h1>232</h1>
+                        <p>happy clients</p>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <span><i class="bi bi-journal-richtext"></i></span>
+                    <div class="content">
+                        <h1>521</h1>
+                        <p>Projects</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span><i class="bi bi-headset"></i></span>
+                    <div class="content">
+                        <h1>1463</h1>
+                        <p>Hours Of Supports</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <span><i class="bi bi-people"></i></span>
+                    <div class="content">
+                        <h1>15</h1>
+                        <p>Hard Workers</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row2">
+                <div class="col1">
+                    <i class="bi bi-gpu-card"></i>
+                    <h5>Modi sit est dela pireda nest</h5>
+                </div>
+
+                <div class="col1">
+                    <i class="bi bi-upc-scan"></i>
+                    <h5>Unde praesenti mara setara le</h5>
+                </div>
+                <div class="col1">
+                    <i class="bi bi-brightness-high"></i>
+                    <h5>Pariatur explica intro dela</h5>
+                </div>
+                <div class="col1">
+                    <i class="bi bi-shop-window"></i>
+                    <h5>Nostrum qui dile node</h5>
+                </div>
+            </div>
+
+            <div class="row3">
+                <div class="col1" id="col-1">
+                    <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
+                    </h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+
+                    </p>
+                    <ul style="line-height: 30px;">
+                        <li> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+                        <li> Duis aute irure dolor in reprehenderit in voluptate velit.
+                        </li>
+                        <li> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+                        </li>
+                    </ul>
+                    <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <br>
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        <br> occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est <br>
+                        laborum
+
+                    </p>
+                </div>
+                <div class="col1">
+                    <img src="../html+css+bootstrap/img/laptop.jpg" alt="" height="100%" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="sub">
+            <h1>Services</h1>
+            <hr style="height: 4px; width: 70px; background-color: red; border: none; margin-left: 680px;">
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui <br>impedit suscipit alias ea.
+
+            </p>
+            <div class="sub2">
+                <div class="row">
+                    <div class="col-md-6 p-2 ">
+
+
+                        <div class="col   h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%;display:block; margin-top: 30px; float: left;">
+                                <i class="bi bi-briefcase"></i>
+                            </span>
+                            <div style=" height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Lorem Ipsum </a></h5>
+                                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                    occaecati cupiditate non provident</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+
+
+                        <div class="col   h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%; display:block; float: left; margin-top: 30px; ">
+                                <i class="bi bi-card-checklist"></i>
+                            </span>
+                            <div style=" height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Dolor Sitema</a></h5>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat tarad limino ata
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 p-2">
+
+
+                        <div class="col   h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%; float: left; display:block; margin-top: 30px; ">
+                                <i class="bi bi-bar-chart"></i>
+                            </span>
+                            <div style="height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Sed ut perspiciatis</a></h5>
+                                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+
+
+                        <div class="col   h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%;  float: left; display:block; margin-top: 30px; ">
+                                <i class="bi bi-binoculars"></i>
+                            </span>
+                            <div style="height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Nemo Enim</a></h5>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 p-2">
+
+
+                        <div class="col   h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%;  display:block; float: left; margin-top: 30px; ">
+                                <i class="bi bi-brightness-high"></i>
+                            </span>
+                            <div style=" height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Magni Dolore</a></h5>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                    voluptatum deleniti atque</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <div class="col  h-100 w-100 p-2" style="background-color: #252525;">
+                            <span style="height: 50%; width: 20%;  display:block; float: left; margin-top: 30px; ">
+                                <i class="bi bi-calendar4-week"></i>
+                            </span>
+                            <div style=" height: 80%; width: 80%; float: left; margin-top: 30px;">
+                                <h5><a href="">Eiusmod Tempor </a></h5>
+                                </a></h5>
+                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                                    soluta nobis est eligendi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="portfolio">
+        <div class="main">
+
+            <h1>PORTFOLIO</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. </p>
+            <div class="row d-flex justify-content-center " style="text-align: center; width: 60%; margin: auto;">
+                <button class="btn btn-sm btn-danger mr-5">ALL</button>
+                <button class="btn btn-sm  mr-5">APP</button>
+                <button class="btn btn-sm  mr-5">CARD</button>
+                <button class="btn btn-sm  mr-5">WEB</button>
+            </div>
+            <div class="row pt-3" style="height: 500px; width: 100%; margin-left: 4px; ">
+                <div class="col-lg-4  border-dark  p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/product.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h4>App1</h4>
+                            <p>App</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/product.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/watch.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h4>Web3</h4>
+                            <p>WEB</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/watch.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/soup.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h4>App2</h4>
+                            <p>APP</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/soup.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/cam.jpg" alt="" height="100% " width="100%">
+                        <div class="portfolio-info">
+                            <h4>Card2</h4>
+                            <p>CARD</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/cam.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/scent.jpg" alt="" height="100%" width="100%">
+                        <div class="portfolio-info">
+                            <h4>Web2</h4>
+                            <p>WEB</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/scent.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 border-dark  p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/cocooil.jpg" alt="" height="100%" width="100%">
+                        <div class="portfolio-info">
+                            <h4>App3</h4>
+                            <p>APP</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/cocooil.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/panna.jpg" alt="" height="100%" width="100%">
+                        <div class="portfolio-info">
+                            <h4>Card1</h4>
+                            <p>CARD</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/watch.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/chair.jpg" alt="" height="100%" width="100%">
+                        <div class="portfolio-info">
+                            <h4>Card2</h4>
+                            <p>CARD</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/watch.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 border-dark p-2">
+                    <div class="portfolio-wrap">
+                        <img src="../html+css+bootstrap/img/brakfast.jpg" alt="" height="100%" width="100%">
+                        <div class="portfolio-info">
+                            <h4>Web3</h4>
+                            <p>WEB</p>
+                            <div class="portfolio-links">
+                                <a href="../html+css+bootstrap/img/brakfast.jpg">
+                                    <i class="bi bi-plus "></i>
+                                </a>
+                                <a href="">
+                                    <i class="bi bi-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="testimonials">
+
+        <div class="main">
+            <h1>TESTIMONIALS</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. </p>
+            <div class="carousel slide " data-ride="carousel" id="c2" style="padding: 0px;">
+                <ul class="carousel-indicators ">
+                    <li data-target="#c2" data-slide-to="0" class="active"></li>
+                    <li data-target="#c2" data-slide-to="1" class="active"></li>
+                    <li data-target="#c2" data-slide-to="2" class="active"></li>
+                    <li data-target="#c2" data-slide-to="3" class="active"></li>
+                    <li data-target="#c2" data-slide-to="4" class="active"></li>
+                </ul>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active ">
+                        <div class="row">
+                            <div class="col-lg-4 p-2 ">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/firstman.jpg" alt="">
+
+                                        <div class="ml-3 ">
+                                            <h6>Soul Goodman</h6>
+                                            <div>CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ratione,
+                                        omnis
+                                        similique itaque sequi exercitationem a delectus incidunt sunt, veritatis
+                                        iusto,
+                                        reprehenderit nobis blanditiis quae.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2 ">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fourthwoman.jpg" alt="">
+                                        <div class="ml-3 ">
+                                            <h6>Sara Wilson</h6>
+                                            <div>Dsigner</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro
+                                        molestias harum nemo qui consequuntur commodi praesentium doloremque
+                                        dolores,
+                                        adipisci doloribus dolorem perferendis officia provident.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fifthwoman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Jena Karlis</h6>
+                                            <div>Store Owner</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla cumque
+                                        ducimus
+                                        iure maxime optio aspernatur animi, iste beatae eligendi necessitatibus
+                                        distinctio! Quis delectus possimus ab?</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fourthwoman.jpg" alt="">
+
+                                        <div class="ml-3 ">
+                                            <h6>Sara Wilson</h6>
+                                            <div>Designer</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur fugiat
+                                        voluptatibus esse odio repellat aliquid laborum enim beatae consectetur,
+                                        quisquam molestiae nesciunt minus architecto ratione.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fifthwoman.jpg" alt="">
+                                        <div class="ml-3 ">
+                                            <h6>Jena Karlis</h6>
+                                            <div>Store Owner</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et culpa, veritatis
+                                        sit
+                                        totam ut error est corrupti distinctio, molestiae at numquam id consequuntur
+                                        ullam illo!</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/thirdman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Matt Brandon</h6>
+                                            <div>Freelancer</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio
+                                        dolor
+                                        sunt dicta tenetur repellendus, voluptatibus, rem, excepturi voluptates
+                                        atque
+                                        deleniti quam optio iure doloremque?</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fifthwoman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Jena Karlis</h6>
+                                            <div>Store Owner</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maxime
+                                        molestias dolores in exercitationem eveniet alias esse a laborum deserunt,
+                                        commodi nulla! Quam, sequi vel!</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/thirdman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Matt Brandon</h6>
+                                            <div>Freelancer</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et porro corrupti
+                                        a,
+                                        eaque iusto provident recusandae possimus pariatur voluptatem consequuntur
+                                        blanditiis veritatis omnis laborum qui.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/firstman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>John Larson</h6>
+                                            <div>Entreprenur</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam
+                                        voluptate modi unde nemo ea eaque deserunt saepe tempora, esse quaerat,
+                                        natus ut
+                                        omnis repellat.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+
+                                        <img src="../html+css+bootstrap/img/thirdman.jpg" alt="">
+
+                                        <div class="ml-3 ">
+                                            <h6>Matt Brandon</h6>
+                                            <div>Freelancer</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel fuga nisi,
+                                        porro
+                                        voluptatum harum reprehenderit veniam assumenda facilis aperiam accusantium
+                                        eum
+                                        dolor deserunt ratione. Provident?</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/secondman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>John Larson</h6>
+                                            <div>Entrprenur</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptas
+                                        eos
+                                        aliquam ad natus cupiditate nesciunt quo, consequatur incidunt error
+                                        explicabo
+                                        iure provident animi temporibus!</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/firstman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Soul Goodman</h6>
+                                            <div>CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore omnis
+                                        ratione
+                                        aspernatur, quisquam enim, reiciendis cupiditate tenetur nostrum fugiat
+                                        tempora
+                                        doloremque sequi tempore distinctio culpa.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/secondman.jpg" alt="">
+
+                                        <div class="ml-3 ">
+                                            <h6>John Larson</h6>
+                                            <div>Entrprenure</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aliquid
+                                        illum
+                                        quod sequi, soluta, eligendi, magnam consequuntur reprehenderit temporibus
+                                        similique nisi vitae perferendis illo dolor.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/firstman.jpg" alt="">
+                                        <div class="ml-3 ">
+                                            <h6>Soul Goodman</h6>
+                                            <div>CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, illo
+                                        reprehenderit culpa excepturi iure minima eveniet, animi ipsam rem molestias
+                                        explicabo odit incidunt aliquam fugit.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 p-2">
+                                <div class="page">
+                                    <div class="row2">
+                                        <img src="../html+css+bootstrap/img/fourthwoman.jpg" alt="">
+
+
+                                        <div class="ml-3 ">
+                                            <h6>Sara Wilson </h6>
+                                            <div>Designer</div>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat et placeat
+                                        reiciendis labore iure nesciunt animi assumenda velit maiores voluptatum
+                                        tempore, fuga quisquam corporis quaerat.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="main">
+            <h1>Pricing</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. </p>
+            <div class="row">
+                <div class="col-lg-4 p-2">
+                    <div class="content">
+                        <h4>FREE</h4>
+                        <div><sup>$</sup><span style="font-size: 30px;">0</span><sub>/ month</sub></div>
+                        <div>Aida dere <br>Nec feugiat nisl <br> Nulla at volutpat dola <br><del>Pharetra massa <br>
+                                Massa ultricies mi</del></div>
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-2">
+                    <div class="content bg-danger">
+                        <h4>Business</h4>
+                        <div><sup>$</sup><span style="font-size: 30px;">19</span><sub>/ month</sub></div>
+                        <div>Aida dere <br>Nec feugiat nisl <br> Nulla at volutpat dola <br><del>Pharetra massa <br>
+                                Massa ultricies mi</del></div>
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-2">
+                    <div class="content">
+                        <h4>Developer</h4>
+                        <div><sup>$</sup><span style="font-size: 30px;">29</span><sub>/ month</sub></div>
+                        <div>Aida dere <br>Nec feugiat nisl <br> Nulla at volutpat dola <br><del>Pharetra massa <br>
+                                Massa ultricies mi</del></div>
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- **************************************************************** -->
+    <section class="ask">
+        <div class="main">
+            <h1>Frequently asked questions</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <div class="accordion" id="accorddata">
+                <h5 data-target="#ans1" data-toggle="collapse">Non consectetur a erat nam at lectus urna duis? <i
+                        class="fa-solid fa-angle-down "></i></h5>
+                <p class="collapse" id="ans1">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat
+                    lacus
+                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+                    non.
+                </p>
+                <hr>
+
+                <h5 data-target="#ans2" data-toggle="collapse">Feugiat scelerisque varius morbi enim nunc faucibus a
+                    pellentesque?
+                    <i class="fa-solid fa-angle-down "></i>
+                </h5>
+                <p class="collapse" id="ans2">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                    interdum velit laoreet id
+                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+                <hr>
+
+                <h5 data-target="#ans3" data-toggle="collapse">Dolor sit amet consectetur adipiscing elit pellentesque
+                    habitant morbi?<i class="fa-solid fa-angle-down "></i></h5>
+                <p class="collapse" id="ans3">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+                    Faucibus pulvinar elementum
+                    integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu
+                    tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed
+                    odio morbi quis
+                </p>
+                <hr>
+
+                <h5 data-target="#ans4" data-toggle="collapse">Ac odio tempor orci dapibus. Aliquam eleifend mi in
+                    nulla?
+                    <i class="fa-solid fa-angle-down "></i>
+                </h5>
+                <p class="collapse" id="ans4">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                    interdum velit laoreet id
+                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+                <hr>
+
+                <h5 data-target="#ans5" data-toggle="collapse">Tempus quam pellentesque nec nam aliquam sem et tortor
+                    consequat?<i class="fa-solid fa-angle-down "></i></h5>
+                <p class="collapse" id="ans5">Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim
+                    suspendisse in est ante in.
+                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
+                    Purus gravida quis blandit turpis cursus in
+                </p>
+                <hr>
+
+                <h5 data-target="#ans6" data-toggle="collapse">Tortor vitae purus faucibus ornare. Varius vel pharetra
+                    vel turpis nunc eget lorem dolor?<i class="fa-solid fa-angle-down "></i></h5>
+                <p class="collapse" id="ans6">Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae
+                    ultricies leo integer malesuada
+                    nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut
+                    venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas
+                    egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                </p>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="main">
+            <h1>Team</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+            <div class="row">
+                <div class="col-lg-3 p-2 " style="border-radius: 5px;">
+                    <div class="sub">
+                        <img src="../html+css+bootstrap/img/sixman.jpg" alt="">
+
+                        <div class="logo">
+                            <span><i class="bi bi-twitter"></i></span>
+                            <span><i class="bi bi-facebook"></i></span>
+                            <span><i class="bi bi-instagram"></i></span>
+                            <span><i class="bi bi-linkedin"></i></span>
+                        </div>
+                        <div class="content pt-3">
+                            <h6>Walter White</h6>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-2 " style="border-radius: 5px;">
+                    <div class="sub">
+                        <img src="../html+css+bootstrap/img/sevenwoman.jpg" alt="">
+
+                        <div class="logo">
+                            <span><i class="bi bi-twitter"></i></span>
+                            <span><i class="bi bi-facebook"></i></span>
+                            <span><i class="bi bi-instagram"></i></span>
+                            <span><i class="bi bi-linkedin"></i></span>
+                        </div>
+                        <div class="content pt-3 bg-light">
+                            <h6>Sarah Jhonson</h6>
+                            <p> Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-2  " style="border-radius: 5px;">
+                    <div class="sub">
+                        <img src="../html+css+bootstrap/img/eightman.jpg" alt="">
+
+                        <div class="logo">
+                            <span><i class="bi bi-twitter"></i></span>
+                            <span><i class="bi bi-facebook"></i></span>
+                            <span><i class="bi bi-instagram"></i></span>
+                            <span><i class="bi bi-linkedin"></i></span>
+                        </div>
+                        <div class="content pt-3 ">
+                            <h6>William Anderson</h6>
+                            <p>CTO</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 p-2 " style="border-radius: 5px;">
+                    <div class="sub">
+                        <img src="../html+css+bootstrap/img/ninethwoman.jpg" alt="">
+
+                        <div class="logo">
+                            <span><i class="bi bi-twitter"></i></span>
+                            <span><i class="bi bi-facebook"></i></span>
+                            <span><i class="bi bi-instagram"></i></span>
+                            <span><i class="bi bi-linkedin"></i></span>
+                        </div>
+                        <div class="content pt-3">
+                            <h6>Amanda Jepson </h6>
+                            <p>Accountant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+            <h1>Contact</h1>
+            <div class="col-1" style="height: 3px; width: 50px; background-color: red; margin: 20px 630px;"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+            <div class="row">
+                <div class="col-lg-6 p-2">
+                    <div class="row h-100 w-100   ">
+                        <div class="col-lg-12 pb-2 ">
+                            <div class="text h-100 w-100 ">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Our Address</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-2 ">
+                            <div class="text h-100 w-100 ">
+                                <i class="bi bi-envelope"></i>
+                                <h4> Email Us</h4>
+                                <p>info@example.com <br>contact@example.com</p>
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-2">
+                            <div class="text h-100 w-100 ">
+                                <i class="bi bi-telephone"></i>
+                                <h4>Call Us</h4>
+                                <p>+1 5589 55488 55 <br>+1 6678 254445 41</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 p-2 ">
+                    <div class="form  ">
+                        <form action="">
+                            <input type="text" placeholder="Your Name" style="width: 49%;" <span><input type="text"
+                                placeholder="Your email" style="margin-right: 0; width: 49%;"></span>
+                            <br>
+                            <br>
+
+                            <input type="text" placeholder="Subject">
+                            <br>
+                            <br>
+                            <textarea name="Message" id="" cols="50" rows="10" placeholder="Message"
+                                style="width: 100%; border-radius: 5px;"></textarea>
+                            <button>Send Message </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer id="footer">
+        <!-- <br> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3   text-light">
+                    <h3>Presento <span
+                            style="height: 7px; width: 7px; background-color: red; margin-left: 2px; display: inline-block;"></span>
+                    </h3>
+                    <p>A108 Adam Street <br>New York, NY 535022 <br> United States <br><br>
+                        <strong style="margin-right: 2px;">Phone:</strong>+1 5589 55488 55
+                        <br>
+                        <strong style="margin-right: 2px;">Email:</strong>info@example.com
+                        <br>
+                    </p>
+                </div>
+                <div class="col-lg-2 p-2 ">
+                    <h4>Useful Links</h4>
+                    <div style="height: 2px; width: 20px; background-color: rgb(241, 49, 49); margin: 20px 0px;"></div>
+                    <ul>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Home</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">About us</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Services</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Terms of service</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 p-2 ">
+                    <h4>Our Services</h4>
+                    <div style="height: 2px; width: 20px; background-color: rgb(241, 49, 49); margin: 20px 0px;"></div>
+                    <ul>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Web Design </a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Web </a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Web evelopment</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#"> Product Management</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Marketing</a></li>
+                        <li> <i class="fa-solid fa-angle-right"></i><a href="#">Graphic design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 p-2">
+                    <h4>Join Our News Letter</h4>
+                    <div style="height: 2px; width: 20px; background-color: rgb(241, 49, 49); margin: 20px 0px;"></div>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <input type="search" placeholder="">
+                    <button class="btn btn-danger px-10 py-2">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottm">
+            <div class="row">
+                <p style="color: rgb(170, 165, 165);">© Copyright Presento. All Rights Reserved <br>Designed by
+                    BootstrapMade</p>
+                <div class="icon ">
+                    <span><i class="bi bi-twitter"></i></span>
+                    <span><i class="bi bi-facebook"></i></span>
+                    <span><i class="bi bi-instagram"></i></span>
+                    <span><i class="bi bi-linkedin"></i></span>
+                </div>
+                <a href="#">
+                    <i class="bi bi-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
